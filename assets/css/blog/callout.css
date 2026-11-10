@@ -1,0 +1,122 @@
+/* Handwritten callout card
+ *
+ * Ghost's editor offers a fixed set of callout colours. Each one is mapped
+ * to a colour from the caregiving palette below:
+ *
+ *   Grey (editor default) -> sage    #7D8A5A
+ *   Green                 -> forest  #2F3D2C
+ *   Blue                  -> blue    #4A6AA8
+ *   Red, Pink             -> rust    #B5552F
+ *   Yellow                -> mustard #E0B23C
+ *   Purple, White         -> bark    #3A2A22
+ *   Accent                -> the site's accent colour (Ghost Admin)
+ */
+
+@font-face {
+    font-family: "Nothing You Could Do";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(""), url("../fonts/nothing-you-could-do-v5-latin-regular.woff2") format("woff2"), url("../fonts/nothing-you-could-do-v5-latin-regular.woff") format("woff");
+}
+
+:root {
+    --callout-forest: #2F3D2C;
+    --callout-sage: #7D8A5A;
+    --callout-rust: #B5552F;
+    --callout-mustard: #E0B23C;
+    --callout-blue: #4A6AA8;
+    --callout-bark: #3A2A22;
+    --callout-light-text: #F7F2E8;
+    --callout-dark-text: #3A2A22;
+    --font-handwritten: "Nothing You Could Do", "Segoe Print", "Bradley Hand", cursive;
+}
+
+.gh-content .kg-callout-card.kg-card {
+    --callout-bg: var(--callout-sage);
+    --callout-text: var(--callout-light-text);
+    display: block;
+    padding: 1.4em 1.6em 1.8em;
+    color: var(--callout-text);
+    background: var(--callout-bg);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.gh-content .kg-callout-card.kg-callout-card-grey { --callout-bg: var(--callout-sage); }
+.gh-content .kg-callout-card.kg-callout-card-green { --callout-bg: var(--callout-forest); }
+.gh-content .kg-callout-card.kg-callout-card-blue { --callout-bg: var(--callout-blue); }
+.gh-content .kg-callout-card.kg-callout-card-red,
+.gh-content .kg-callout-card.kg-callout-card-pink { --callout-bg: var(--callout-rust); }
+.gh-content .kg-callout-card.kg-callout-card-purple,
+.gh-content .kg-callout-card.kg-callout-card-white { --callout-bg: var(--callout-bark); }
+.gh-content .kg-callout-card.kg-callout-card-accent { --callout-bg: var(--brand-color); }
+
+.gh-content .kg-callout-card.kg-callout-card-yellow {
+    --callout-bg: var(--callout-mustard);
+    --callout-text: var(--callout-dark-text);
+}
+
+/* No emoji */
+.gh-content .kg-callout-card .kg-callout-emoji {
+    display: none;
+}
+
+.gh-content .kg-callout-card div.kg-callout-text {
+    /* Beats the theme's serif-body rule and Ghost's custom font setting */
+    font-family: var(--font-handwritten) !important;
+    font-size: 1.35em;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: inherit;
+    /* Room for the staggered line indents added by assets/js/main.js */
+    padding-right: 1.6em;
+    /* Until the script tilts each line, tilt the whole block */
+    transform: rotate(-2deg);
+    transform-origin: left center;
+}
+
+.gh-content .kg-callout-card div.kg-callout-text.is-handwritten {
+    transform: none;
+}
+
+.gh-content .kg-callout-card .kg-callout-text a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.gh-content .kg-callout-card .kg-callout-text .callout-word {
+    display: inline-block;
+}
+
+/* Callout + the paragraphs after it, grouped by assets/js/main.js so the
+ * text can wrap around the callout on wider screens */
+.gh-content .callout-flow {
+    display: flow-root;
+}
+
+.gh-content .callout-flow > * + * {
+    margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
+}
+
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content .callout-flow > :is(p, ul, ol) {
+    font-family: var(--gh-font-body, var(--font-serif));
+}
+
+@media (min-width: 768px) {
+    .gh-content .callout-flow > .kg-callout-card {
+        float: right;
+        width: 50%;
+        margin: 0.4em 0 1.2em 2.4rem;
+    }
+
+    /* Outranks Ghost's ".gh-content :is(.kg-card, table) + :not(...)" spacing */
+    .gh-content .callout-flow > .kg-callout-card.kg-card + :not(.kg-card):not(table) {
+        margin-top: 0;
+    }
+
+    .gh-content .callout-flow > .kg-callout-card div.kg-callout-text {
+        font-size: 1.2em;
+    }
+}
