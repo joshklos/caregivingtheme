@@ -1,50 +1,30 @@
 <article class="single {{post_class}}">
 
     {{#match @page.show_title_and_feature_image}}
-        <header class="single-header gh-canvas">
-            {{#is "post"}}
-            <div class="single-meta">
-                <span class="single-meta-item single-meta-date">
-                    <time datetime="{{date format="YYYY-MM-DD"}}">
-                        {{date published_at format="DD MMM YYYY"}}
-                    </time>
-                </span>
-                <span class="single-meta-item single-meta-length">
-                    {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
-                </span>
-                {{#primary_tag}}
-                    <span class="single-meta-item single-meta-tag">
-                        <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
-                    </span>
-                {{/primary_tag}}
-            </div>
-            {{/is}}
-
-            <h1 class="single-title">{{title}}</h1>
-
-            {{#if custom_excerpt}}
-                <div class="single-excerpt">
-                    {{custom_excerpt}}
-                </div>
-            {{/if}}
-
-            <div class="gh-meta-share">
-                <a href="#/share" class="gh-button-share">{{t "Share"}} {{> "icons/share"}}</a>
-            </div>
-
-            <div class="author-name" style="display: none;">{{authors}}</div>
-
-            {{#if feature_image}}
-            {{#unless no_image}}
-                <figure class="single-media kg-width-{{width}}">
-                    <img class="gh-feature-image" srcset="{{> "srcset"}}" sizes="(min-width: 1023px) 920px, calc(90vw)" src="{{img_url feature_image size="l"}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+        {{#if feature_image}}{{#unless no_image}}{{#if @custom.title_over_feature_image}}
+            {{!-- Title and meta laid over the feature image --}}
+            <header class="single-header single-header-overlay gh-canvas">
+                <figure class="single-media single-hero kg-width-{{width}}">
+                    <div class="single-hero-frame">
+                        <img class="gh-feature-image" srcset="{{> "srcset"}}" sizes="{{#match width "full"}}100vw{{else}}(min-width: 1023px) 920px, calc(90vw){{/match}}" src="{{img_url feature_image size="l"}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                        <div class="single-hero-text">
+                            {{> "single-heading"}}
+                        </div>
+                    </div>
                     {{#if feature_image_caption}}
                         <figcaption>{{feature_image_caption}}</figcaption>
                     {{/if}}
                 </figure>
-            {{/unless}}
-            {{/if}}
-        </header>
+
+                {{> "single-intro"}}
+            </header>
+        {{else}}
+            {{> "single-header"}}
+        {{/if}}{{else}}
+            {{> "single-header"}}
+        {{/unless}}{{else}}
+            {{> "single-header"}}
+        {{/if}}
     {{/match}}
 
     <div class="single-content gh-content gh-canvas">

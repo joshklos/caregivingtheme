@@ -102,6 +102,11 @@
                 "default": "Expanded",
                 "group": "homepage"
             },
+            "title_over_feature_image": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
+            },
             "show_author": {
                 "type": "boolean",
                 "default": true,
