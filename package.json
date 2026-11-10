@@ -1,6 +1,6 @@
 {
-    "name": "edition",
-    "description": "A clean, minimal newsletter theme for the Ghost publishing platform",
+    "name": "caregiving-edition",
+    "description": "A caregiving-focused newsletter theme for the Ghost publishing platform, adapted from Edition",
     "version": "1.0.0",
     "private": true,
     "engines": {
