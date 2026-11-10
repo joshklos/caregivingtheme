@@ -37,3 +37,16 @@
 :where(h1, h2, h3, h4, h5, h6) {
     font-weight: 800;
 }
+
+/* "Elegant serif" body font: use Newsreader across the whole site
+ * (navigation, buttons, meta text, tables), not just post text */
+body.has-serif-body,
+.has-serif-body .gh-content table:not(.gist table) {
+    font-family: var(--gh-font-body, var(--font-serif));
+}
+
+/* "Elegant serif" title font: use Newsreader for every heading,
+ * including the text site name in the header */
+.has-serif-title :is(h1, h2, h3, h4, h5, h6, .gh-head-logo, .cover-description) {
+    font-family: var(--gh-font-heading, var(--font-serif));
+}
