@@ -1,0 +1,36 @@
+/* Font sizes from Ghost's shared theme styles (@tryghost/shared-theme-assets),
+ * scaled up by 19/17 to match the 1.9rem post text. Sizes in the theme's own
+ * CSS files were changed directly. Generated values, rounded to 0.1rem / 1px. */
+
+:root { --h1-size: 5.1rem; } /* was 4.6rem */
+.gh-article-excerpt { font-size: 2.3rem; } /* was 2.1rem */
+.gh-button-share { font-size: 1.7rem; } /* was 1.5rem */
+.gh-btn { font-size: 1.8rem; } /* was 1.6rem */
+.kg-card.kg-toggle-card .kg-toggle-heading-text { font-size: 2.2rem; } /* was 2rem */
+.gh-content table:not(.gist table) { font-size: 1.8rem; } /* was 1.6rem */
+.gh-content table:not(.gist table) th { font-size: 1.3rem; } /* was 1.2rem */
+.gh-cta-title { font-size: 2.5rem; } /* was 2.2rem */
+.gh-cta-link { font-size: 1.6rem; } /* was 1.4rem */
+.gh-foot-inner { font-size: 1.5rem; } /* was 1.3rem */
+.gh-foot-menu .nav li + li::before { font-size: 1rem; } /* was 0.9rem */
+body { font-size: 1.8rem; } /* was 1.6rem */
+h2 { font-size: 3.1rem; } /* was 2.8rem */
+h3 { font-size: 2.7rem; } /* was 2.4rem */
+h4 { font-size: 2.5rem; } /* was 2.2rem */
+h5 { font-size: 2.2rem; } /* was 2rem */
+h6 { font-size: 2rem; } /* was 1.8rem */
+figcaption { font-size: 1.6rem; } /* was 1.4rem */
+code { font-size: 17px; } /* was 15px */
+.gh-head-logo { font-size: 2.7rem; } /* was 2.4rem */
+
+@media (max-width: 767px) {
+    :root { --h1-size: 3.6rem !important; } /* was 3.2rem */
+    .gh-article-excerpt { font-size: 2.1rem; } /* was 1.9rem */
+    .gh-content { font-size: 1.9rem; } /* was 1.7rem */
+    h2 { font-size: 2.7rem; } /* was 2.4rem */
+    h3 { font-size: 2.3rem; } /* was 2.1rem */
+    #gh-head .gh-head-logo { font-size: 2.5rem; } /* was 2.2rem */
+    #gh-head .nav a { font-size: 2.9rem; } /* was 2.6rem */
+    #gh-head .gh-head-btn { font-size: 2rem; } /* was 1.8rem */
+    #gh-head .gh-head-btn:not(.gh-btn) { font-size: 2.2rem; } /* was 2rem */
+}

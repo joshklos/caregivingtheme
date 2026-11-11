@@ -9,7 +9,7 @@
 
 .single-meta {
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--secondary-text-color);
     text-transform: uppercase;
@@ -23,7 +23,7 @@
 
 .single-title {
     margin-bottom: 0;
-    font-size: 4rem;
+    font-size: 4.5rem;
     line-height: 1.2;
     letter-spacing: -0.1rem;
     word-break: break-word;
@@ -35,7 +35,7 @@
 
 .single-excerpt {
     margin-top: 2rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     word-break: break-word;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .single-cta-footer {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400 !important;
     letter-spacing: -0.02rem;
 }
@@ -104,7 +104,7 @@
 
 .single-footer-title {
     margin-bottom: 1rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .single-footer-top + .single-footer-bottom {
@@ -117,11 +117,11 @@
     }
 
     .single-title {
-        font-size: 2.6rem;
+        font-size: 2.9rem;
     }
 
     .single-excerpt {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
     }
 
     .single-media {
