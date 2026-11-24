@@ -25,6 +25,7 @@
     --animation-base: ease-in-out;
     --font-sans: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
     --font-serif: Newsreader, Georgia, Times, serif;
+    --font-serif-heading: Fraunces, Georgia, Times, serif;
     --navbar-height: 80px;
     --content-font-size: 1.9rem;
     --header-spacing: 6vmin;
@@ -45,8 +46,12 @@ body.has-serif-body,
     font-family: var(--gh-font-body, var(--font-serif));
 }
 
-/* "Elegant serif" title font: use Newsreader for every heading,
- * including the text site name in the header */
+/* "Elegant serif" title font: use Fraunces for every heading, including
+ * the text site name in the header. Redefining --font-serif on these
+ * elements also switches the theme's and Ghost's other serif-title rules
+ * (which use var(--font-serif)) to Fraunces, while body text keeps
+ * Newsreader. */
 .has-serif-title :is(h1, h2, h3, h4, h5, h6, .gh-head-logo, .cover-description) {
-    font-family: var(--gh-font-heading, var(--font-serif));
+    --font-serif: var(--font-serif-heading);
+    font-family: var(--gh-font-heading, var(--font-serif-heading));
 }

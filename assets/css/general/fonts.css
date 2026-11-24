@@ -60,3 +60,21 @@
     font-weight: 700;
     src: local(""), url("../fonts/newsreader-v5-latin-700italic.woff2") format("woff2"), url("../fonts/newsreader-v5-latin-700italic.woff") format("woff");
 }
+
+/* Fraunces variable font: weights 100-900 with an optical-size axis,
+ * so large headlines automatically get the display design */
+@font-face {
+    font-family: Fraunces;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: local(""), url("../fonts/fraunces-v5-latin-variable.woff2") format("woff2-variations"), url("../fonts/fraunces-v5-latin-variable.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Fraunces;
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: local(""), url("../fonts/fraunces-v5-latin-variable-italic.woff2") format("woff2-variations"), url("../fonts/fraunces-v5-latin-variable-italic.woff2") format("woff2");
+}
