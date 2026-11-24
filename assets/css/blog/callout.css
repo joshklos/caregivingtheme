@@ -88,6 +88,13 @@
     --callout-text: var(--callout-evergreen);
 }
 
+/* Petal callouts match the page background, so give them a thin Pampas
+ * outline to keep the box visible */
+.gh-content .kg-callout-card.kg-callout-card-blue,
+.gh-content .kg-callout-card.kg-callout-card-white {
+    box-shadow: inset 0 0 0 2px var(--callout-pampas);
+}
+
 .gh-content .kg-callout-card.kg-callout-card-accent {
     --callout-bg: var(--brand-color);
     --callout-text: var(--callout-cream);
