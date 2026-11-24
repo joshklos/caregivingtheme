@@ -13,15 +13,17 @@ Callouts use the handwritten "Nothing You Could Do" font, hide the emoji, and ti
 
 The colour you pick for a callout in the Ghost editor maps to the theme palette:
 
-| Editor colour | Theme colour |
-| --- | --- |
-| Grey (default) | Sage `#7D8A5A` |
-| Green | Forest `#2F3D2C` |
-| Blue | Blue `#4A6AA8` |
-| Red, Pink | Rust `#B5552F` |
-| Yellow | Mustard `#E0B23C` (dark text) |
-| Purple, White | Bark `#3A2A22` |
-| Accent | Site accent colour |
+| Editor colour | Background | Text |
+| --- | --- | --- |
+| Grey (default) | Evergreen `#2F3D2C` | Petal `#F4ECDF` |
+| Green | Willow `#7D8A5A` | Petal `#F4ECDF` |
+| Blue | Petal `#F4ECDF` | Evergreen `#2F3D2C` |
+| Red | Clay `#B5552F` | Petal `#F4ECDF` |
+| Pink | Wild Rose `#A56D6E` | Petal `#F4ECDF` |
+| Yellow | Golden Hour `#F7D7A6` | Evergreen `#2F3D2C` |
+| Purple | Pampas `#D8C3A0` | Evergreen `#2F3D2C` |
+| White | Petal `#F4ECDF` | Evergreen `#2F3D2C` |
+| Accent | Site accent colour | Cream `#F7F2E8` |
 
 The Ghost editor itself still previews its own colours; the palette appears on the published site.
 

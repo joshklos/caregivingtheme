@@ -1,15 +1,18 @@
 /* Handwritten callout card
  *
  * Ghost's editor offers a fixed set of callout colours. Each one is mapped
- * to a colour from the caregiving palette below:
+ * to a colour from the caregiving palette:
  *
- *   Grey (editor default) -> sage    #7D8A5A
- *   Green                 -> forest  #2F3D2C
- *   Blue                  -> blue    #4A6AA8
- *   Red, Pink             -> rust    #B5552F
- *   Yellow                -> mustard #E0B23C
- *   Purple, White         -> bark    #3A2A22
- *   Accent                -> the site's accent colour (Ghost Admin)
+ *   Editor colour          Background             Text
+ *   Grey (editor default)  Evergreen   #2F3D2C    Petal     #F4ECDF
+ *   Green                  Willow      #7D8A5A    Petal     #F4ECDF
+ *   Blue                   Petal       #F4ECDF    Evergreen #2F3D2C
+ *   Red                    Clay        #B5552F    Petal     #F4ECDF
+ *   Pink                   Wild Rose   #A56D6E    Petal     #F4ECDF
+ *   Yellow                 Golden Hour #F7D7A6    Evergreen #2F3D2C
+ *   Purple                 Pampas      #D8C3A0    Evergreen #2F3D2C
+ *   White                  Petal       #F4ECDF    Evergreen #2F3D2C
+ *   Accent                 site accent colour     Cream     #F7F2E8
  */
 
 @font-face {
@@ -21,20 +24,20 @@
 }
 
 :root {
-    --callout-forest: #2F3D2C;
-    --callout-sage: #7D8A5A;
-    --callout-rust: #B5552F;
-    --callout-mustard: #E0B23C;
-    --callout-blue: #4A6AA8;
-    --callout-bark: #3A2A22;
-    --callout-light-text: #F7F2E8;
-    --callout-dark-text: #3A2A22;
+    --callout-evergreen: #2F3D2C;
+    --callout-willow: #7D8A5A;
+    --callout-petal: #F4ECDF;
+    --callout-clay: #B5552F;
+    --callout-wild-rose: #A56D6E;
+    --callout-golden-hour: #F7D7A6;
+    --callout-pampas: #D8C3A0;
+    --callout-cream: #F7F2E8;
     --font-handwritten: "Nothing You Could Do", "Segoe Print", "Bradley Hand", cursive;
 }
 
 .gh-content .kg-callout-card.kg-card {
-    --callout-bg: var(--callout-sage);
-    --callout-text: var(--callout-light-text);
+    --callout-bg: var(--callout-evergreen);
+    --callout-text: var(--callout-petal);
     display: block;
     padding: 1.4em 1.6em 1.8em;
     color: var(--callout-text);
@@ -43,18 +46,49 @@
     box-shadow: none;
 }
 
-.gh-content .kg-callout-card.kg-callout-card-grey { --callout-bg: var(--callout-sage); }
-.gh-content .kg-callout-card.kg-callout-card-green { --callout-bg: var(--callout-forest); }
-.gh-content .kg-callout-card.kg-callout-card-blue { --callout-bg: var(--callout-blue); }
-.gh-content .kg-callout-card.kg-callout-card-red,
-.gh-content .kg-callout-card.kg-callout-card-pink { --callout-bg: var(--callout-rust); }
-.gh-content .kg-callout-card.kg-callout-card-purple,
-.gh-content .kg-callout-card.kg-callout-card-white { --callout-bg: var(--callout-bark); }
-.gh-content .kg-callout-card.kg-callout-card-accent { --callout-bg: var(--brand-color); }
+.gh-content .kg-callout-card.kg-callout-card-grey {
+    --callout-bg: var(--callout-evergreen);
+    --callout-text: var(--callout-petal);
+}
+
+.gh-content .kg-callout-card.kg-callout-card-green {
+    --callout-bg: var(--callout-willow);
+    --callout-text: var(--callout-petal);
+}
+
+.gh-content .kg-callout-card.kg-callout-card-blue {
+    --callout-bg: var(--callout-petal);
+    --callout-text: var(--callout-evergreen);
+}
+
+.gh-content .kg-callout-card.kg-callout-card-red {
+    --callout-bg: var(--callout-clay);
+    --callout-text: var(--callout-petal);
+}
+
+.gh-content .kg-callout-card.kg-callout-card-pink {
+    --callout-bg: var(--callout-wild-rose);
+    --callout-text: var(--callout-petal);
+}
 
 .gh-content .kg-callout-card.kg-callout-card-yellow {
-    --callout-bg: var(--callout-mustard);
-    --callout-text: var(--callout-dark-text);
+    --callout-bg: var(--callout-golden-hour);
+    --callout-text: var(--callout-evergreen);
+}
+
+.gh-content .kg-callout-card.kg-callout-card-purple {
+    --callout-bg: var(--callout-pampas);
+    --callout-text: var(--callout-evergreen);
+}
+
+.gh-content .kg-callout-card.kg-callout-card-white {
+    --callout-bg: var(--callout-petal);
+    --callout-text: var(--callout-evergreen);
+}
+
+.gh-content .kg-callout-card.kg-callout-card-accent {
+    --callout-bg: var(--brand-color);
+    --callout-text: var(--callout-cream);
 }
 
 /* No emoji */
