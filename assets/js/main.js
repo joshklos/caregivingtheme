@@ -83,7 +83,7 @@ function callouts() {
     var cards = document.querySelectorAll('.gh-content .kg-callout-card');
     if (!cards.length) return;
 
-    var ANGLES = [-2.6, -1.4, -2.2, -1, -3]; // degrees, one per line
+    var ANGLES = [-2.6, -2.1, -2.9, -2.3, -2.7]; // degrees, one per line (kept between -2 and -3)
     var INDENTS = [0, 1.1, 0.15, 1.6, 0.5]; // em, one per line
     var FLOWS = ['P', 'UL', 'OL'];
 
