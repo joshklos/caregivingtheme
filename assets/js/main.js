@@ -159,6 +159,27 @@ function callouts() {
                     word.style.transform = 'translateX(' + indent + 'em) rotate(' + angle + 'deg)';
                 });
             });
+
+            // Tilting raises the right end of each line, so the text no longer
+            // sits in the middle of the box. Measure where the tilted words
+            // actually are and move padding from one side to the other so the
+            // space above and below them is equal.
+            var card = text.closest('.kg-callout-card');
+            if (!card || !words.length) return;
+            card.style.paddingTop = '';
+            card.style.paddingBottom = '';
+            var box = card.getBoundingClientRect();
+            var top = Infinity;
+            var bottom = -Infinity;
+            Array.prototype.forEach.call(words, function (word) {
+                var rect = word.getBoundingClientRect();
+                top = Math.min(top, rect.top);
+                bottom = Math.max(bottom, rect.bottom);
+            });
+            var shift = ((top - box.top) - (box.bottom - bottom)) / 2;
+            var style = window.getComputedStyle(card);
+            card.style.paddingTop = (parseFloat(style.paddingTop) - shift) + 'px';
+            card.style.paddingBottom = (parseFloat(style.paddingBottom) + shift) + 'px';
         });
     }
 

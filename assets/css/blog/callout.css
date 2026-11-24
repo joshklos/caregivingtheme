@@ -39,7 +39,9 @@
     --callout-bg: var(--callout-evergreen);
     --callout-text: var(--callout-petal);
     display: block;
-    padding: 1.4em 1.6em 1.8em;
+    /* Equal top and bottom padding; assets/js/main.js then fine-tunes it so
+     * the tilted lines sit centred in the box */
+    padding: 1.6em;
     color: var(--callout-text);
     background: var(--callout-bg);
     border-radius: 0;
