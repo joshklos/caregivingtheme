@@ -1,0 +1,30 @@
+/* Heading weights for Fraunces ("Elegant serif" title font, the default).
+ * Headlines (post and page titles, the site name, cover text) use a
+ * weight between Medium and SemiBold; subheads use Medium. Fraunces is a
+ * variable font, so any weight from 100 to 900 is available.
+ * With "Modern sans-serif" titles, Mulish keeps its original weights. */
+
+:root {
+    --headline-weight: 550;
+    --subhead-weight: 500;
+}
+
+/* Subheads: section titles and headings inside posts */
+.has-serif-title :is(h2, h3, h4, h5, h6),
+.has-serif-title .kg-card.kg-toggle-card .kg-toggle-heading-text {
+    font-weight: var(--subhead-weight);
+}
+
+/* Headlines */
+.has-serif-title h1,
+.has-serif-title .gh-head .gh-head-logo,
+.has-serif-title .cover .cover-description,
+.has-serif-title .single-header .single-title,
+.has-serif-title .post-feed .feed-title,
+.has-serif-title .post-feed.expanded .feed-title,
+.has-serif-title .featured-wrapper .post-title,
+.has-serif-title .related-wrapper .post-title,
+.has-serif-title .kg-header-card h2.kg-header-card-header,
+.has-serif-title .kg-header-card h2.kg-header-card-heading {
+    font-weight: var(--headline-weight);
+}
