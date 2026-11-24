@@ -8,3 +8,27 @@
     overflow: hidden;
     border-radius: 50%;
 }
+
+/* Logo lockups that replace the title on the "blog" and "newsletters" tag
+ * pages (see tag.hbs). Widths follow each SVG's proportions so the icon
+ * square comes out the same size on both pages. */
+.tag-lockup {
+    --lockup-height: 12rem;
+    line-height: 0;
+}
+
+.tag-lockup img {
+    display: block;
+    width: min(100%, calc(var(--lockup-ratio) * var(--lockup-height)));
+    height: auto;
+    margin: 0 auto;
+}
+
+.tag-lockup-blog { --lockup-ratio: 4.3; }          /* 2666 x 620 */
+.tag-lockup-newsletters { --lockup-ratio: 4.812; } /* 3104 x 645 */
+
+@media (max-width: 767px) {
+    .tag-lockup {
+        --lockup-height: 7rem;
+    }
+}
