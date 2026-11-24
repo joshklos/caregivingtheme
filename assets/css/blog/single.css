@@ -179,8 +179,7 @@
     opacity: 0.9;
 }
 
-.single-header-overlay .single-hero + .single-excerpt,
-.single-header-overlay .single-hero + .gh-meta-share {
+.single-header-overlay .single-hero + .single-excerpt {
     margin-top: 3rem;
 }
 

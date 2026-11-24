@@ -69,3 +69,8 @@
 .share-link-instagram {
     background-color: var(--instagram-color);
 }
+
+/* Share button at the end of the post, above the "Published by" footer */
+.gh-meta-share.single-share {
+    margin-top: 4.8rem;
+}

@@ -31,6 +31,13 @@
         {{content}}
     </div>
 
+    {{!-- Share button at the end of the post/page, above "Published by" --}}
+    <div class="gh-canvas">
+        <div class="gh-meta-share single-share">
+            <a href="#/share" class="gh-button-share">{{t "Share"}} {{> "icons/share"}}</a>
+        </div>
+    </div>
+
     {{#is "post"}}
     <div class="gh-canvas">
     <footer class="single-footer">
