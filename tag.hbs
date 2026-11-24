@@ -14,11 +14,11 @@
         <header class="single-header gh-canvas">
             {{#match slug "blog"}}
                 <h1 class="single-title tag-lockup tag-lockup-blog">
-                    <img src="{{asset "images/blog-lockup-evergreen.svg"}}" alt="{{name}}" width="2666" height="620">
+                    <img src="{{asset "images/blog-lockup-evergreen.svg"}}" alt="Caregiving...UP for Discussion" width="2666" height="620">
                 </h1>
             {{else match slug "newsletters"}}
                 <h1 class="single-title tag-lockup tag-lockup-newsletters">
-                    <img src="{{asset "images/newsletter-lockup-evergreen.svg"}}" alt="{{name}}" width="3104" height="645">
+                    <img src="{{asset "images/newsletter-lockup-evergreen.svg"}}" alt="CaregivingUP Today" width="3104" height="645">
                 </h1>
             {{else}}
                 <h1 class="single-title">{{name}}</h1>
@@ -26,6 +26,15 @@
             {{#if description}}
                 <div class="single-excerpt">{{description}}</div>
             {{/if}}
+            {{#match slug "newsletters"}}
+                {{#if @site.members_enabled}}
+                {{#unless @member}}
+                    <div class="tag-signup">
+                        <a class="tag-signup-button" href="#/portal/signup" data-portal="signup">Sign up for the newsletter</a>
+                    </div>
+                {{/unless}}
+                {{/if}}
+            {{/match}}
         </header>
 
     </section>

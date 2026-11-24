@@ -9,7 +9,7 @@
 
 .gh-head-menu,
 .gh-head-actions {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
@@ -18,4 +18,21 @@
         justify-content: center;
         margin: 0;
     }
+}
+
+/* Accent-coloured header (shown when the site has a cover image): Petal
+ * navigation text and icons, and a Petal subscribe button with Evergreen
+ * text */
+.is-head-brand:not(.is-head-transparent) :is(.gh-head .nav a, .gh-head-description, .gh-head-link, .gh-head-logo, .gh-head-logo a, .gh-search, .gh-social, .nav-more-toggle) {
+    color: var(--petal-color);
+}
+
+.is-head-brand:not(.is-head-transparent) .gh-burger::before,
+.is-head-brand:not(.is-head-transparent) .gh-burger::after {
+    background-color: var(--petal-color);
+}
+
+.is-head-brand:not(.is-head-transparent) .gh-head-btn {
+    color: var(--evergreen-color);
+    background-color: var(--petal-color);
 }

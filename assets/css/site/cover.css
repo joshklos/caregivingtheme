@@ -2,11 +2,19 @@ body:not(.with-full-cover) .cover {
     margin-top: 9vmin;
 }
 
+/* The homepage header is a solid bar above the cover (not transparent over
+ * it), so the cover fills the rest of the screen below the 100px bar */
 .with-full-cover .cover {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 100px);
     overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .with-full-cover .cover {
+        height: calc(100vh - 64px);
+    }
 }
 
 .with-full-cover .cover.half {

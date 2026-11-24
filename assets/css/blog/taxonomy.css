@@ -32,3 +32,28 @@
         --lockup-height: 7rem;
     }
 }
+
+/* Newsletter sign-up button under the description on /tag/newsletters/.
+ * Opens Ghost's sign-up form; hidden for signed-in members. */
+.tag-signup {
+    margin-top: 2.8rem;
+}
+
+.tag-signup-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 2.8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--petal-color);
+    background-color: var(--evergreen-color);
+    border-radius: 48px;
+    transition: opacity 0.2s ease;
+}
+
+.tag-signup-button:hover {
+    opacity: 0.9;
+}

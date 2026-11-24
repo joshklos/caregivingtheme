@@ -5,8 +5,8 @@ var st = 0;
 
 cover();
 featured();
+callouts(); // before pagination(), so an error there can't stop it
 pagination(false);
-callouts();
 
 window.addEventListener('scroll', function () {
     'use strict';

@@ -4,6 +4,7 @@
     --secondary-text-color: #999;
     --white-color: #fff;
     --petal-color: #F4ECDF;
+    --evergreen-color: #2F3D2C;
     --lighter-gray-color: #f6f6f6;
     --light-gray-color: #e6e6e6;
     --mid-gray-color: #ccc;
@@ -57,8 +58,8 @@ body.has-serif-body,
     font-family: var(--gh-font-heading, var(--font-serif-heading));
 }
 
-/* Petal page background below the white navigation bar (.gh-head keeps its
- * own white background) */
+/* Petal page background below the navigation bar (.gh-head has its own
+ * background) */
 body {
     background-color: var(--petal-color);
 }
@@ -71,21 +72,4 @@ body {
 /* Table headers blend with the page instead of showing a white strip */
 .gh-content table:not(.gist table) th {
     background-color: transparent;
-}
-
-/* Breathing room between the white navigation bar and the Petal page, so
- * titles and tag logos don't sit flush against the bar. The homepage cover
- * has its own spacing. */
-.site-main {
-    padding-top: var(--header-spacing);
-}
-
-.home-template .site-main {
-    padding-top: 0;
-}
-
-/* Edge-to-edge feature images (full-width post template) sit directly
- * under the bar, with no Petal strip above them */
-.site-main:has(> .single > .single-header > .single-media.kg-width-full:first-child) {
-    padding-top: 0;
 }
